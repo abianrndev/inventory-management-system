@@ -5,10 +5,10 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Layout from './components/Layout';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-// import Borrowings from './pages/Borrowings';
-// import Receivings from './pages/Receivings';
-// import Items from './pages/Items';
-// import Users from './pages/Users';
+import Borrowings from './pages/Borrowings';
+import Receivings from './pages/Receivings';
+import Items from './pages/Items';
+import Users from './pages/Users';
 
 function App() {
   return (
@@ -27,8 +27,6 @@ function App() {
             </ProtectedRoute>
           } />
           
-          {/* Temporarily comment out these routes until we create the components */}
-          {/* 
           <Route path="/borrowings" element={
             <ProtectedRoute>
               <Layout>
@@ -60,7 +58,6 @@ function App() {
               </Layout>
             </ProtectedRoute>
           } />
-          */}
         </Routes>
       </Router>
     </AuthProvider>
