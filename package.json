@@ -1,0 +1,1 @@
+{\n  "name": "inventory-management-system",\n  "private": true,\n  "workspaces": [\n    "client",\n    "server"\n  ]\n}
