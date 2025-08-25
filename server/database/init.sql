@@ -57,12 +57,12 @@ CREATE TABLE IF NOT EXISTS receivings (
     FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Insert default users (passwords are hashed version of the plain text)
--- superadmin: admin123, admin: admin123, client: client123
+-- Insert default users (passwords are hashed version of "admin123")
+-- All users have password: admin123
 INSERT IGNORE INTO users (username, password, role) VALUES
-('superadmin', '$2a$10$K7L/8Y1t4W.5B9K2.2vx2eK3Ll.mJ0Q8q9aK7L/8Y1t4W.5B9K2.2vx2e', 'super_admin'),
-('admin', '$2a$10$K7L/8Y1t4W.5B9K2.2vx2eK3Ll.mJ0Q8q9aK7L/8Y1t4W.5B9K2.2vx2e', 'admin'),
-('client', '$2a$10$K7L/8Y1t4W.5B9K2.2vx2eK3Ll.mJ0Q8q9aK7L/8Y1t4W.5B9K2.2vx2e', 'client');
+('superadmin', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'super_admin'),
+('admin', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin'),
+('client', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'client');
 
 -- Insert sample items
 INSERT IGNORE INTO items (nama_barang, kategori, satuan, stok_current, stok_minimal) VALUES
